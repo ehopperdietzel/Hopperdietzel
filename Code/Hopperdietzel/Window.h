@@ -1,9 +1,14 @@
-#ifndef WINDOW_H
-#define WINDOW_H
+#ifndef NNNN
+#define NNNN
 
-#include "Headers.h"
-#include "TopBar.h"
-#include "LeftBar.h"
+#include "headers.h"
+#include "tableButton.h"
+#include "topBar.h"
+#include "leftBar.h"
+
+class DataBase;
+class ClientsView;
+class OrdersView;
 
 class Window : public QWidget
 {
@@ -11,10 +16,14 @@ class Window : public QWidget
 
 public:
     // Main Window
-    Window();
+    Window(DataBase *_db);
 
     // Bottom container
     QWidget *bottomContainer = new QWidget();
+
+    // Views
+    ClientsView *clientsView;
+    OrdersView *ordersView;
 
     // Bars
     TopBar *mainTopBar = new TopBar();
@@ -24,9 +33,14 @@ public:
     QVBoxLayout *verticalLayout = new QVBoxLayout(this);
     QHBoxLayout *horizontalLayout = new QHBoxLayout(bottomContainer);
 
+    // Database
+    DataBase *db;
 
+private:
+    void closeEvent(QCloseEvent *close);
 
-
+public slots:
+    void itemSelected(LeftBarItem *);
 };
 
-#endif // WINDOW_H
+#endif

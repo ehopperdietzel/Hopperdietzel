@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Images/Clientes.svg</file>
+        <file>Images/Configuraciones.svg</file>
+        <file>Images/Estadisticas.svg</file>
+        <file>Images/Pedidos.svg</file>
+        <file>Images/Produccion.svg</file>
+        <file>Images/Caja.svg</file>
+        <file>Images/Deudas.svg</file>
+        <file>Images/Cerveza.svg</file>
+    </qresource>
+</RCC>

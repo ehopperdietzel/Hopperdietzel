@@ -1,4 +1,4 @@
-#include "TopBar.h"
+#include "topbar.h"
 
 TopBar::TopBar()
 {
@@ -9,5 +9,13 @@ TopBar::TopBar()
     layout->setMargin(10);
 
     title->setStyleSheet("font-family:Impact;color:#DDD;font-size:30px");
+    layout->setAlignment(Qt::AlignVCenter);
     layout->addWidget(title);
+    layout->addWidget(amarillas);
+    layout->addWidget(rojas);
+    layout->addWidget(negras);
+    layout->addWidget(encargos);
+    layout->addWidget(deudas);
+    layout->addStretch(1);
+
 }

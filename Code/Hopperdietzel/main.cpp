@@ -1,11 +1,9 @@
-#include "Window.h"
-#include "Headers.h"
+#include "headers.h"
+#include "dataBase.h"
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    Window w;
-    w.show();
-
+    DataBase *db = new DataBase();
     return a.exec();
 }

@@ -8,6 +8,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
+ICON = icon.icns
 TARGET = Hopperdietzel
 TEMPLATE = app
 
@@ -23,14 +24,38 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 
-SOURCES += \
-        main.cpp \
-        Window.cpp \
-    TopBar.cpp \
-    LeftBar.cpp
+
+
+RESOURCES += \
+    res.qrc
 
 HEADERS += \
-        Window.h \
-    TopBar.h \
-    Headers.h \
-    LeftBar.h
+    addclient.h \
+    addorder.h \
+    clientsview.h \
+    database.h \
+    editclient.h \
+    headers.h \
+    icon.h \
+    leftbar.h \
+    leftbarheader.h \
+    leftbaritem.h \
+    ordersview.h \
+    tablebutton.h \
+    tableitem.h \
+    topbar.h \
+    topbarcounter.h \
+    usernamerequest.h \
+    window.h
+
+SOURCES += \
+    addclient.cpp \
+    addorder.cpp \
+    clientsview.cpp \
+    database.cpp \
+    editclient.cpp \
+    leftbar.cpp \
+    main.cpp \
+    ordersview.cpp \
+    topbar.cpp \
+    window.cpp
